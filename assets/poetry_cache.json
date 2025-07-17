@@ -1,0 +1,443 @@
+[
+  {
+    "lines": [
+      "In the forest deep and green,",
+      "Where the ancient trees have been,",
+      "Whispers of the wind tell tales,",
+      "Of nature's endless trails."
+    ],
+    "author": "Anonymous",
+    "title": "Forest Whispers",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Gentle waves upon the shore,",
+      "Bringing peace forevermore,",
+      "Ocean's rhythm, calm and deep,",
+      "Soothing souls to peaceful sleep."
+    ],
+    "author": "Anonymous",
+    "title": "Ocean's Peace",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Golden sunlight through the leaves,",
+      "Dancing shadows that time weaves,",
+      "Every moment holds a gift,",
+      "As morning mists begin to lift."
+    ],
+    "author": "Anonymous",
+    "title": "Morning Light",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Stars above in silent night,",
+      "Guide us with their gentle light,",
+      "Dreams take flight on evening's wing,",
+      "Peace to every heart they bring."
+    ],
+    "author": "Anonymous",
+    "title": "Starlit Peace",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Autumn leaves fall soft and slow,",
+      "Teaching us to let things go,",
+      "In each ending, new begins,",
+      "Life's eternal cycle spins."
+    ],
+    "author": "Anonymous",
+    "title": "Autumn Wisdom",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Rivers carve through ancient stone,",
+      "Never rushing, never alone,",
+      "Time and water shape the land,",
+      "With patience we can understand."
+    ],
+    "author": "Anonymous",
+    "title": "River's Wisdom",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Mountain peaks touch cloudy skies,",
+      "Where the eagle freely flies,",
+      "Standing tall through wind and rain,",
+      "Strength is found through joy and pain."
+    ],
+    "author": "Anonymous",
+    "title": "Mountain Strength",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Dewdrops glisten in dawn's light,",
+      "Washing away the fears of night,",
+      "Each new day brings hope anew,",
+      "Fresh beginnings wait for you."
+    ],
+    "author": "Anonymous",
+    "title": "Dawn's Promise",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Wildflowers bloom where they choose,",
+      "With nothing left to win or lose,",
+      "Beauty grows without a plan,",
+      "Teaching all who understand."
+    ],
+    "author": "Anonymous",
+    "title": "Wild Beauty",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Thunder speaks across the plains,",
+      "As earth receives the healing rains,",
+      "Nature's power, fierce and free,",
+      "Shows us who we're meant to be."
+    ],
+    "author": "Anonymous",
+    "title": "Thunder's Voice",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "In silence, truth is found,",
+      "Where no words make a sound,",
+      "The heart speaks clearest when",
+      "We pause and breathe again."
+    ],
+    "author": "Anonymous",
+    "title": "Silent Truth",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Simple moments hold the key,",
+      "To what we're meant to be,",
+      "In present breath, we find",
+      "The peace we seek in mind."
+    ],
+    "author": "Anonymous",
+    "title": "Simple Moments",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Like water finds its way,",
+      "Through valleys day by day,",
+      "So patience carves the path,",
+      "To wisdom's aftermath."
+    ],
+    "author": "Anonymous",
+    "title": "Patient Flow",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Stillness holds the greatest power,",
+      "Growing stronger every hour,",
+      "In the quiet space between",
+      "All we've lost and might have been."
+    ],
+    "author": "Anonymous",
+    "title": "Stillness Power",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Footsteps on an empty path,",
+      "Leading beyond joy and wrath,",
+      "Each step taken with intent,",
+      "Shows the way that peace is meant."
+    ],
+    "author": "Anonymous",
+    "title": "Empty Path",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Tides return with ancient song,",
+      "Carrying wisdom all along,",
+      "Ebb and flow of life's great dance,",
+      "Teaching us to take our chance."
+    ],
+    "author": "Anonymous",
+    "title": "Tidal Wisdom",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Seashells scattered on the shore,",
+      "Each one different than before,",
+      "Ocean's gifts from depths below,",
+      "Reminding us to let things go."
+    ],
+    "author": "Anonymous",
+    "title": "Seashell Gifts",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Two roads diverged in yellow wood,",
+      "And sorry I could not travel both,",
+      "I took the one less traveled by,",
+      "And that has made all the difference."
+    ],
+    "author": "Robert Frost",
+    "title": "The Road Not Taken (excerpt)",
+    "source": "public_domain",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I wandered lonely as a cloud,",
+      "That floats on high o'er vales and hills,",
+      "When all at once I saw a crowd,",
+      "A host of golden daffodils."
+    ],
+    "author": "William Wordsworth",
+    "title": "Daffodils (excerpt)",
+    "source": "public_domain",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "The woods are lovely, dark and deep,",
+      "But I have promises to keep,",
+      "And miles to go before I sleep,",
+      "And miles to go before I sleep."
+    ],
+    "author": "Robert Frost",
+    "title": "Stopping by Woods (excerpt)",
+    "source": "public_domain",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "They say girls want love,",
+      "and men want freedom",
+      "but I\u2019ve seen men walk away",
+      "from money, dreams,",
+      "and the passions of their lives,",
+      "just for the chance",
+      "to be soft without shame,",
+      "to cry without turning their faces,",
+      "to write sonnets on sticky notes,",
+      "to be kissed without armor,",
+      "wearing nothing but hope",
+      "the color of surrender."
+    ],
+    "author": "snowball0101",
+    "title": "Want",
+    "source": "reddit",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "We\u2019ve started over, no big deals today,",
+      "every day different from the last;",
+      "And um,,,, do you think I\u2019d still be on here if it wasn\u2019t for your ass\u2026?",
+      "You are who I look for when my hand needs a squeeze. Without but within, think this thought often.",
+      "Your existence is enough. How could I not have faith in anything that feels this good.",
+      "I can feel your heart? Or at least I think I can.,,, wish I knew what to do.",
+      "Not every day you can meet someone who can call your bluff? Well not every day for me that is;",
+      "It\u2019s fascinating and terrifying all at once. Can\u2019t seem to get enough either. But time takes time and I have a feeling if we do see each other then we\u2019ll know where to go from there.,  we\u2019ll say;"
+    ],
+    "author": "Spiritual-Promise-26",
+    "title": "You make me smile",
+    "source": "reddit",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "She\u2019s dangerous",
+      "she\u2019s evil",
+      "A conniving crazy wh*re",
+      "Or is she just existing",
+      "And you want her to be more"
+    ],
+    "author": "Desperate-Lemon-7985",
+    "title": "Wednesday",
+    "source": "reddit",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Freud would have loved this one! (Oedipus much?)",
+      "Can a poem also be a joke and vice versa? \u2014See Exhibit A above!",
+      "I Am Flying Into Myself: Selected Poems 1960-2014"
+    ],
+    "author": "perrolazarillo",
+    "title": "[poem] \u201cDear Advice Columnist\u201d \u2014 Bill Knott",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "They say girls want love,",
+      "and men want freedom",
+      "but I\u2019ve seen men walk away",
+      "from money, dreams,",
+      "and the passions of their lives,",
+      "just for the chance",
+      "to be soft without shame,",
+      "to cry without turning their faces,",
+      "to write sonnets on sticky notes,",
+      "to be kissed without armor,",
+      "wearing nothing but hope",
+      "the color of surrender."
+    ],
+    "author": "snowball0101",
+    "title": "Want",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I often seem to think",
+      "of ink",
+      "flowing over flowers.",
+      "but from time to time the focus shifts",
+      "and I realize,",
+      "the flowers were being used",
+      "as impromptu paint brushes.",
+      "Lmk what you all think yurr"
+    ],
+    "author": "Dazzling_Many_498",
+    "title": "Inked flowers?",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "We\u2019ve started over, no big deals today,",
+      "every day different from the last;",
+      "And um,,,, do you think I\u2019d still be on here if it wasn\u2019t for your ass\u2026?",
+      "You are who I look for when my hand needs a squeeze. Without but within, think this thought often.",
+      "Your existence is enough. How could I not have faith in anything that feels this good.",
+      "I can feel your heart? Or at least I think I can.,,, wish I knew what to do.",
+      "Not every day you can meet someone who can call your bluff? Well not every day for me that is;",
+      "It\u2019s fascinating and terrifying all at once. Can\u2019t seem to get enough either. But time takes time and I have a feeling if we do see each other then we\u2019ll know where to go from there.,  we\u2019ll say;"
+    ],
+    "author": "Spiritual-Promise-26",
+    "title": "You make me smile",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I think I love you.",
+      "Without remorse, or trepidation.",
+      "I think I love you.",
+      "Without limits,  or fear.",
+      "I think I love you.",
+      "More than less.",
+      "Greater than myself,",
+      "While learning to love me",
+      "Through you I find peace.",
+      "In you,  I find myself whole."
+    ],
+    "author": "bekdawg10",
+    "title": "Loved",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "She\u2019s dangerous",
+      "she\u2019s evil",
+      "A conniving crazy wh*re",
+      "Or is she just existing",
+      "And you want her to be more"
+    ],
+    "author": "Desperate-Lemon-7985",
+    "title": "Wednesday",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "How can you go through life without purpose",
+      "Walk an endless path losing focus",
+      "Seeing everyone accomplishing their dreams",
+      "Wondering when yours will spread their wings",
+      "But what are my dreams anyway?",
+      "What if I never build my own way",
+      "How can I wish upon the stars",
+      "When the sky seems so high and so far",
+      "They\u2019re waiting for my moment to come",
+      "But how can I tell them that I\u2019m already done",
+      "my story ended before it even began",
+      "The day I lost hope, tucked my tail and ran"
+    ],
+    "author": "velaris_78",
+    "title": "Lost dreams",
+    "source": "custom",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [],
+    "author": "AI in style of William Wordsworth",
+    "title": "Nature Reflections",
+    "source": "azure_gpt",
+    "theme": "nature",
+    "created_at": "2025-07-17T16:01:43.776454"
+  }
+]

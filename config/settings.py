@@ -1,0 +1,56 @@
+from pydantic_settings import BaseSettings
+from typing import Optional
+import os
+
+
+class Settings(BaseSettings):
+    # API Settings
+    app_name: str = "Poetry Video Generator"
+    debug: bool = False
+    
+    # AWS S3 Settings
+    aws_access_key_id: Optional[str] = None
+    aws_secret_access_key: Optional[str] = None
+    aws_region: str = "us-east-1"
+    s3_bucket_name: Optional[str] = None
+    s3_base_url: Optional[str] = None
+    
+    # Azure OpenAI Settings
+    azure_openai_endpoint: Optional[str] = None
+    azure_openai_api_key: Optional[str] = None
+    azure_openai_api_version: str = "2025-03-01-preview"
+    azure_openai_model: str = "onyx"
+    
+    # Video Settings
+    video_width: int = 1080
+    video_height: int = 1920
+    video_duration: int = 18  # seconds
+    video_fps: int = 24
+    
+    # Audio Settings
+    audio_fade_duration: float = 1.0  # seconds
+    
+    # File Paths
+    temp_dir: str = "./temp"
+    assets_dir: str = "./assets"
+    fonts_dir: str = "./assets/fonts"
+    backgrounds_dir: str = "./assets/backgrounds"
+    audio_dir: str = "./audio"
+    
+    # Poetry Settings
+    min_lines: int = 4
+    max_lines: int = 8
+    
+    class Config:
+        env_file = ".env"
+
+
+# Global settings instance
+settings = Settings()
+
+# Ensure directories exist
+os.makedirs(settings.temp_dir, exist_ok=True)
+os.makedirs(settings.assets_dir, exist_ok=True)
+os.makedirs(settings.fonts_dir, exist_ok=True)
+os.makedirs(settings.backgrounds_dir, exist_ok=True)
+os.makedirs(settings.audio_dir, exist_ok=True) 

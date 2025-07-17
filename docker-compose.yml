@@ -1,0 +1,87 @@
+version: '3.8'
+
+services:
+  poetry-generator:
+    build: .
+    container_name: poetry-video-generator
+    ports:
+      - "8001:8001"
+    env_file:
+      - .env
+    environment:
+      # AWS S3 Configuration
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - S3_BUCKET_NAME=${S3_BUCKET_NAME}
+      - S3_BASE_URL=${S3_BASE_URL}
+      
+      # Azure OpenAI GPT Configuration
+      - AZURE_OPENAI_ENDPOINT=${AZURE_OPENAI_ENDPOINT}
+      - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY}
+      - AZURE_OPENAI_DEPLOYMENT_NAME=${AZURE_OPENAI_DEPLOYMENT_NAME}
+      - AZURE_OPENAI_API_VERSION=${AZURE_OPENAI_API_VERSION}
+      
+      # Azure OpenAI TTS Configuration
+      - AZURE_OPENAI_TTS_ENDPOINT=${AZURE_OPENAI_TTS_ENDPOINT}
+      - AZURE_OPENAI_TTS_API_KEY=${AZURE_OPENAI_TTS_API_KEY}
+      - AZURE_OPENAI_TTS_API_VERSION=${AZURE_OPENAI_TTS_API_VERSION}
+      
+      # Pexels API Configuration
+      - PEXELS_API_KEY=${PEXELS_API_KEY}
+      
+      # Application Configuration
+      - DEBUG=${DEBUG:-false}
+      - APP_NAME=${APP_NAME:-Poetry Video Generator}
+      
+      # Video Settings
+      - VIDEO_WIDTH=${VIDEO_WIDTH:-1080}
+      - VIDEO_HEIGHT=${VIDEO_HEIGHT:-1920}
+      - VIDEO_DURATION=${VIDEO_DURATION:-18}
+      - VIDEO_FPS=${VIDEO_FPS:-24}
+      - AUDIO_FADE_DURATION=${AUDIO_FADE_DURATION:-1.0}
+      
+      # Poetry Settings
+      - MIN_LINES=${MIN_LINES:-4}
+      - MAX_LINES=${MAX_LINES:-8}
+      
+      # File Paths
+      - TEMP_DIR=${TEMP_DIR:-./temp}
+      - ASSETS_DIR=${ASSETS_DIR:-./assets}
+      - FONTS_DIR=${FONTS_DIR:-./assets/fonts}
+      - BACKGROUNDS_DIR=${BACKGROUNDS_DIR:-./assets/backgrounds}
+      - AUDIO_DIR=${AUDIO_DIR:-./audio}
+    
+    volumes:
+      # Mount assets directory for persistent storage
+      - ./assets:/app/assets
+      # Mount temp directory for better performance
+      - ./temp:/app/temp
+      # Mount audio directory for persistent storage
+      - ./audio:/app/audio
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+
+  # Optional: Add a reverse proxy for production
+  # nginx:
+  #   image: nginx:alpine
+  #   container_name: poetry-nginx
+  #   ports:
+  #     - "80:80"
+  #     - "443:443"
+  #   volumes:
+  #     - ./nginx.conf:/etc/nginx/nginx.conf
+  #   depends_on:
+  #     - poetry-generator
+  #   restart: unless-stopped 
