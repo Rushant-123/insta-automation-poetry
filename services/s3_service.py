@@ -42,11 +42,14 @@ class EC2UploadService:
                 fields={
                     'video': (filename, f, 'video/mp4'),
                     'caption': caption,
-                    'accessToken': settings.ec2_access_token,
-                    'accountId': settings.ec2_account_id
+                    'accessToken': self.access_token,
+                    'accountId': self.account_id
                 }
             )
-            headers = {'Content-Type': m.content_type}
+            headers = {
+                'Content-Type': m.content_type,
+                'Content-Length': str(os.path.getsize(local_file_path))
+            }
             try:
                 logger.info(f"Uploading video to EC2: {filename}")
                 response = requests.post(self.upload_url, data=m, headers=headers)
