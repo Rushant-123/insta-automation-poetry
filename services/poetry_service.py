@@ -752,13 +752,25 @@ class PoetryService:
         pass
         
     async def recite_existing_poem_with_gpt(self, theme: str = "nature", poet_name: str = "Robert Frost") -> Optional[Poetry]:
-        """Ask GPT to recite an existing famous poem by the specified poet that matches the theme."""
+        """Ask GPT to recite a less common poem by the specified poet."""
         try:
             # Get poet info
             poet_info = next((p for p in self.famous_poets if p["name"] == poet_name), self.famous_poets[0])
             
-            # Craft the prompt to ask for existing poems
-            prompt = f"""Please recite a famous, well-known poem by {poet_info['name']} that relates to the theme of {theme}.\n\nRequirements:\n- Must be an actual, existing poem by {poet_info['name']}\n- Should be 4-8 lines long (you can use a short excerpt if the poem is longer)\n- Each line must be on a new line\n- Return at least 4 lines\n- Family-friendly and appropriate for all audiences\n- Should relate to themes like {theme}, nature, hope, love, dreams, or life's beauty\n- Return ONLY the poem lines, no title or author attribution\n- Do not generate new content - only recite existing famous poems\n\nFor example, if asked for Robert Frost and nature, you might recite lines from \"The Road Not Taken\" or \"Stopping by Woods on a Snowy Evening\".\n\nRespond with only the poem lines, one per line, no extra text."""
+            # Craft the prompt to ask for less common poems
+            prompt = f"""Please recite a less commonly known or underappreciated poem by {poet_info['name']} that relates to {theme}.\n\n
+Requirements:
+- Must be an actual, existing poem by {poet_info['name']}
+- Should be 4-8 lines long (you can use a short excerpt if the poem is longer)
+- Each line must be on a new line
+- Return at least 4 lines
+- Family-friendly and appropriate for all audiences
+- Should relate to themes like {theme}
+- Return ONLY the poem lines, no title or author attribution
+- Avoid the poet's most famous works (e.g., for Robert Frost, avoid 'The Road Not Taken', 'Stopping by Woods', 'Fire and Ice', etc.)
+- Choose lesser-known but authentic poems that showcase the poet's style
+
+Respond with only the poem lines, one per line, no extra text."""
 
             # Make API request
             async with httpx.AsyncClient() as client:
