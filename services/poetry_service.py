@@ -773,7 +773,7 @@ class PoetryService:
                             {"role": "user", "content": prompt}
                         ],
                         # "max_completion_tokens": 200,
-                        "temperature": 0.3
+                        "temperature": 1.0
                     },
                     timeout=30.0
                 )
