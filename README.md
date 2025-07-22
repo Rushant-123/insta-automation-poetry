@@ -94,29 +94,38 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 ## API Usage
 
-### Generate Poetry Video
+Generate a poetry video by sending a POST request to `/generate-video`:
 
-**POST** `/generate-video`
-
-```json
-{
-  "theme": "nature",
-  "text_style": "elegant",
-  "animation": "fade_in",
-  "custom_poetry": "Optional custom poetry text...",
-  "duration": 18
-}
+```bash
+curl -X POST http://your-server:8000/generate-video \
+  -H "Content-Type: application/json" \
+  -d '{
+    "theme": "nature",
+    "voice_style": "edge_female_calm"
+  }'
 ```
 
-**Response:**
+### Parameters:
+- `theme` (string): Theme for the poem and background video (e.g., "nature", "ocean", "sunset")
+- `voice_style` (string): Voice style for the voiceover (default: "edge_female_calm")
+
+### Response:
+The API returns a JSON response with the video URL and upload status.
+
+Example response:
 ```json
 {
   "success": true,
-  "video_url": "https://your-bucket.s3.amazonaws.com/poetry-videos/uuid.mp4",
-  "video_id": "550e8400-e29b-41d4-a716-446655440000",
-  "theme": "nature",
-  "poetry_lines": ["Line 1", "Line 2", "Line 3", "Line 4"],
-  "duration": 18
+  "s3Upload": {
+    "url": "https://instareelspublic.s3.amazonaws.com/videos/...",
+    "key": "videos/...",
+    "bucket": "instareelspublic"
+  },
+  "instagram": {
+    "containerId": "...",
+    "scheduled": false,
+    "accountId": "..."
+  }
 }
 ```
 
