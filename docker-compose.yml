@@ -5,7 +5,7 @@ services:
     build: .
     container_name: poetry-video-generator
     ports:
-      - "8001:8001"
+      - "8000:8001"
     env_file:
       - .env
     environment:
