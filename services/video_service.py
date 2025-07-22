@@ -373,6 +373,17 @@ class VideoService:
         total_text_height = len(poetry_lines) * line_height
         start_y = (height - total_text_height) // 2
         
+        # Create a semi-transparent background for all text
+        text_bg_height = total_text_height + 60  # Add padding
+        text_bg_width = width - 40  # Leave margin
+        text_background = ColorClip(
+            size=(text_bg_width, text_bg_height),
+            color=(0, 0, 0),  # Black background
+            duration=duration
+        ).set_opacity(0.5).set_position(('center', start_y - 30))  # 30px padding top
+        
+        text_clips.append(text_background)
+        
         # Create individual line clips
         for i, line in enumerate(poetry_lines):
             if not line.strip():
@@ -389,11 +400,8 @@ class VideoService:
                 font=font_path if font_path else 'Arial',  # Use Arial as fallback
                 method='caption',
                 size=(width - 100, None),  # Leave margin
-                align='center',
-                bg_color='black',  # Add black background to individual text
-                stroke_color='black',  # Add stroke for better readability
-                stroke_width=2
-            ).set_opacity(1.0)  # Ensure text is fully opaque
+                align='center'
+            )
             
             # Position text
             txt_clip = txt_clip.set_position(('center', y_position))

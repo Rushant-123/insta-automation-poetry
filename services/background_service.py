@@ -144,9 +144,7 @@ class BackgroundService:
             return None
             
     async def get_random_background(self, theme: ThemeType) -> Optional[str]:
-        """Get a random background video for theme."""
-        theme_files = []
-        
+        """Get a random background video."""
         # Check existing files first
         if os.path.exists(self.backgrounds_dir):
             all_files = [
@@ -154,29 +152,18 @@ class BackgroundService:
                 if f.lower().endswith(('.mp4', '.mov', '.avi'))
             ]
             
-            # Filter by theme if possible
-            theme_keywords = [kw.lower() for kw in self.theme_keywords.get(theme, [])]
-            theme_files = [
-                f for f in all_files
-                if any(keyword in f.lower() for keyword in theme_keywords)
-            ]
-            
-            # If no theme-specific files, use any available
-            if not theme_files:
-                theme_files = all_files
+            if all_files:
+                # Just pick any random video
+                selected_file = random.choice(all_files)
+                original_path = os.path.join(self.backgrounds_dir, selected_file)
+                return await self._copy_to_temp(original_path)
                 
         # If no files available, try to fetch one
-        if not theme_files:
-            logger.info(f"No background videos found for {theme}, fetching...")
-            fetched = await self.fetch_backgrounds_for_theme(theme, 1)
-            if fetched:
-                return fetched[0]
-            return None
-            
-        # Return random file as temporary copy
-        selected_file = random.choice(theme_files)
-        original_path = os.path.join(self.backgrounds_dir, selected_file)
-        return await self._copy_to_temp(original_path)
+        logger.info(f"No background videos found, fetching...")
+        fetched = await self.fetch_backgrounds_for_theme(theme, 1)
+        if fetched:
+            return fetched[0]
+        return None
         
     async def _copy_to_temp(self, original_path: str) -> str:
         """Copy background video to temporary location to avoid deleting original."""
