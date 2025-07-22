@@ -30,7 +30,7 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copy application code
 COPY . .
 
-# Create necessary directories and set permissions
+# Create necessary directories and set permissions (after copy to fix permissions)
 RUN mkdir -p temp assets/backgrounds assets/audio assets/fonts audio/tts && \
     chmod -R 777 /app/assets /app/temp /app/audio && \
     chown -R poetry:poetry /app
