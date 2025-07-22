@@ -32,6 +32,7 @@ COPY . .
 
 # Create necessary directories and set permissions
 RUN mkdir -p temp assets/backgrounds assets/audio assets/fonts audio/tts && \
+    chmod -R 777 /app/assets /app/temp /app/audio && \
     chown -R poetry:poetry /app
 
 # Switch to non-root user
