@@ -16,7 +16,7 @@ from moviepy.audio.fx.audio_fadeout import audio_fadeout
 from moviepy.config import change_settings
 
 # Configure ImageMagick path for MoviePy
-change_settings({"IMAGEMAGICK_BINARY": "/opt/homebrew/bin/convert"})
+change_settings({"IMAGEMAGICK_BINARY": "convert"})  # Use system PATH on Linux
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 import requests
