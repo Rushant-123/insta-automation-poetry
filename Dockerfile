@@ -33,13 +33,11 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copy application code
 COPY . .
 
-# Ensure audio/tts directory is writable after copy
-RUN mkdir -p audio/tts && chmod -R 777 audio/tts
-
 # Create necessary directories and set permissions (after copy to fix permissions)
 RUN mkdir -p temp assets/backgrounds assets/audio audio/tts && \
     chmod -R 777 /app/assets /app/temp /app/audio && \
-    chown -R poetry:poetry /app
+    chown -R poetry:poetry /app && \
+    chmod 777 /app/audio/tts  # Ensure TTS directory is fully writable
 
 # Switch to non-root user
 USER poetry
