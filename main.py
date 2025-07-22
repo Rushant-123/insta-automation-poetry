@@ -16,7 +16,7 @@ from models.schemas import (
 )
 from services.video_service import VideoService
 from services.poetry_service import PoetryService
-from services.s3_service import S3Service
+from services.s3_service import EC2UploadService
 from services.background_service import BackgroundService
 from services.audio_service import AudioService
 from services.tts_service import TTSService
@@ -45,7 +45,7 @@ async def lifespan(app: FastAPI):
         
         # Initialize core services
         poetry_service = PoetryService()
-        s3_service = S3Service()
+        s3_service = EC2UploadService()
         background_service = BackgroundService()
         audio_service = AudioService()
         tts_service = TTSService()

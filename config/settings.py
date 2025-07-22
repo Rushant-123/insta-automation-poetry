@@ -35,11 +35,16 @@ class Settings(BaseSettings):
     assets_dir: str = "./assets"
     fonts_dir: str = "./assets/fonts"
     backgrounds_dir: str = "./assets/backgrounds"
-    audio_dir: str = "./audio"
+    audio_dir: str = "./audio/drive-download-20250721T081448Z-1-001"
     
     # Poetry Settings
     min_lines: int = 4
     max_lines: int = 8
+    
+    # EC2 Upload Settings
+    ec2_upload_url: str = "http://44.208.29.67:3000/api/upload-reel"
+    ec2_access_token: str = "IGAAi3ZADNDq1tBZAE56aHlQTEZAOTDNvR0ZArVDJ2TXlMSVplWVc0UDUtQlNMbk9ubU9ENTUtM1l1cUFzRFU3NW54SF96ek5fR3FoOVI0QlRPNnQyLXlmajFYekpEaWRiOWd0ZA0IxVm5sZAXRldmdkek0xUk9tVnRfWDhLWGlLcVpMbwZDZD"
+    ec2_account_id: str = "17841474257813173"
     
     class Config:
         env_file = ".env"

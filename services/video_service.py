@@ -24,7 +24,7 @@ import random
 
 from config.settings import settings
 from config.themes import TextStyle, AnimationType, get_theme_config
-from services.s3_service import S3Service
+from services.s3_service import EC2UploadService
 from services.tts_service import TTSService
 from utils.text_animator import TextAnimator
 from utils.video_composer import VideoComposer
@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 class VideoService:
     """Service for generating poetry videos."""
     
-    def __init__(self, s3_service: S3Service, background_service=None, audio_service=None, tts_service=None):
+    def __init__(self, s3_service: EC2UploadService, background_service=None, audio_service=None, tts_service=None):
         """Initialize video service."""
         self.s3_service = s3_service
         self.background_service = background_service
@@ -132,9 +132,9 @@ class VideoService:
                 fps
             )
             
-            # Upload to S3
-            s3_key = self.s3_service.generate_s3_key(video_id)
-            video_url = await self.s3_service.upload_video(output_path, s3_key)
+            # Upload to EC2
+            poem_caption = "\n".join(poetry_lines)
+            video_url = await self.s3_service.upload_video(output_path, poem_caption, video_type="poetry", reel_id=video_id)
             
             # Clean up temporary files (keep video if S3 is disabled for testing)
             try:
