@@ -19,7 +19,7 @@ class TTSService:
     
     def __init__(self):
         """Initialize TTS service."""
-        self.tts_dir = Path(settings.audio_dir) / "tts"
+        self.tts_dir = Path("audio/tts")
         self.tts_dir.mkdir(parents=True, exist_ok=True)
         self.available_voices = self._get_available_voices()
         
