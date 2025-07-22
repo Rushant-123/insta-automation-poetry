@@ -38,7 +38,6 @@ class Settings(BaseSettings):
     # File Paths
     temp_dir: str = "./temp"
     assets_dir: str = "./assets"
-    fonts_dir: str = "./assets/fonts"
     backgrounds_dir: str = "./assets/backgrounds"
     audio_dir: str = "./audio/drive-download-20250721T081448Z-1-001"
     
@@ -61,6 +60,5 @@ settings = Settings()
 # Ensure directories exist
 os.makedirs(settings.temp_dir, exist_ok=True)
 os.makedirs(settings.assets_dir, exist_ok=True)
-os.makedirs(settings.fonts_dir, exist_ok=True)
 os.makedirs(settings.backgrounds_dir, exist_ok=True)
 os.makedirs(settings.audio_dir, exist_ok=True) 
