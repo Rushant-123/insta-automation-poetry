@@ -24,10 +24,10 @@ class TTSService:
         self.available_voices = self._get_available_voices()
         
         # Azure OpenAI TTS configuration (separate from GPT)
-        self.azure_endpoint = os.getenv("AZURE_OPENAI_TTS_ENDPOINT", "https://dunlin-deployment.openai.azure.com/")
-        self.azure_api_key = os.getenv("AZURE_OPENAI_TTS_API_KEY", "EqxJDSX9qYv3w0C0kixWm1EtjKNlFO7v3a3TRKvZTjiNFVhFWDgjJQQJ99ALACHrzpqXJ3w3AAABACOGYMAg")
-        self.azure_api_version = os.getenv("AZURE_OPENAI_TTS_API_VERSION", "2025-03-01-preview")
-        self.azure_deployment_name = "tts-hd"  # Use the correct deployment name from JS example
+        self.azure_endpoint = settings.azure_openai_tts_endpoint
+        self.azure_api_key = settings.azure_openai_tts_api_key
+        self.azure_api_version = settings.azure_openai_tts_api_version
+        self.azure_deployment_name = settings.azure_openai_deployment_name
         
     def _get_available_voices(self) -> Dict[str, str]:
         """Get available voices for different TTS engines."""

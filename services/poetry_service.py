@@ -31,7 +31,8 @@ class PoetryService:
         self.cache_file = "assets/poetry_cache.json"
         
         # Azure OpenAI GPT configuration
-        self.gpt_endpoint = settings.azure_openai_endpoint
+        base_endpoint = settings.azure_openai_endpoint.rstrip('/')  # Remove trailing slash if present
+        self.gpt_endpoint = f"{base_endpoint}/openai/deployments/{settings.azure_openai_deployment_name}/chat/completions?api-version={settings.azure_openai_api_version}"
         self.gpt_api_key = settings.azure_openai_api_key
         self.gpt_deployment = settings.azure_openai_deployment_name
         self.gpt_api_version = settings.azure_openai_api_version
@@ -757,17 +758,7 @@ class PoetryService:
             poet_info = next((p for p in self.famous_poets if p["name"] == poet_name), self.famous_poets[0])
             
             # Craft the prompt to ask for existing poems
-            prompt = f"""Please recite a famous, well-known poem by {poet_info['name']} that relates to the theme of {theme}. 
-
-Requirements:
-- Must be an actual, existing poem by {poet_info['name']}
-- Should be 4-8 lines long (you can use a short excerpt if the poem is longer)
-- Family-friendly and appropriate for all audiences
-- Should relate to themes like {theme}, nature, hope, love, dreams, or life's beauty
-- Return ONLY the poem lines, no title or author attribution
-- Do not generate new content - only recite existing famous poems
-
-For example, if asked for Robert Frost and nature, you might recite lines from "The Road Not Taken" or "Stopping by Woods on a Snowy Evening"."""
+            prompt = f"""Please recite a famous, well-known poem by {poet_info['name']} that relates to the theme of {theme}.\n\nRequirements:\n- Must be an actual, existing poem by {poet_info['name']}\n- Should be 4-8 lines long (you can use a short excerpt if the poem is longer)\n- Each line must be on a new line\n- Return at least 4 lines\n- Family-friendly and appropriate for all audiences\n- Should relate to themes like {theme}, nature, hope, love, dreams, or life's beauty\n- Return ONLY the poem lines, no title or author attribution\n- Do not generate new content - only recite existing famous poems\n\nFor example, if asked for Robert Frost and nature, you might recite lines from \"The Road Not Taken\" or \"Stopping by Woods on a Snowy Evening\".\n\nRespond with only the poem lines, one per line, no extra text."""
 
             # Make API request
             async with httpx.AsyncClient() as client:
@@ -781,13 +772,15 @@ For example, if asked for Robert Frost and nature, you might recite lines from "
                         "messages": [
                             {"role": "user", "content": prompt}
                         ],
-                        "max_completion_tokens": 200
+                        # "max_completion_tokens": 200,
+                        "temperature": 0.3
                     },
                     timeout=30.0
                 )
                 
                 if response.status_code == 200:
                     poem_text = response.json()["choices"][0]["message"]["content"].strip()
+                    logger.info(f"Raw GPT poem response: {poem_text}")
                     lines = [line.strip() for line in poem_text.split("\n") if line.strip()]
                     
                     # Clean up any quotation marks or formatting
@@ -808,10 +801,6 @@ For example, if asked for Robert Frost and nature, you might recite lines from "
                             theme=theme,
                             created_at=datetime.now()
                         )
-                        
-                        # Add to database and cache
-                        self.poetry_database.append(poem)
-                        await self._save_poetry_cache()
                         
                         logger.info(f"GPT recited existing poem by {poet_info['name']}")
                         return poem

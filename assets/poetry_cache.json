@@ -1,248 +1,14 @@
 [
   {
     "lines": [
-      "In the forest deep and green,",
-      "Where the ancient trees have been,",
-      "Whispers of the wind tell tales,",
-      "Of nature's endless trails."
-    ],
-    "author": "Anonymous",
-    "title": "Forest Whispers",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Gentle waves upon the shore,",
-      "Bringing peace forevermore,",
-      "Ocean's rhythm, calm and deep,",
-      "Soothing souls to peaceful sleep."
-    ],
-    "author": "Anonymous",
-    "title": "Ocean's Peace",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Golden sunlight through the leaves,",
-      "Dancing shadows that time weaves,",
-      "Every moment holds a gift,",
-      "As morning mists begin to lift."
-    ],
-    "author": "Anonymous",
-    "title": "Morning Light",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Stars above in silent night,",
-      "Guide us with their gentle light,",
-      "Dreams take flight on evening's wing,",
-      "Peace to every heart they bring."
-    ],
-    "author": "Anonymous",
-    "title": "Starlit Peace",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Autumn leaves fall soft and slow,",
-      "Teaching us to let things go,",
-      "In each ending, new begins,",
-      "Life's eternal cycle spins."
-    ],
-    "author": "Anonymous",
-    "title": "Autumn Wisdom",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Rivers carve through ancient stone,",
-      "Never rushing, never alone,",
-      "Time and water shape the land,",
-      "With patience we can understand."
-    ],
-    "author": "Anonymous",
-    "title": "River's Wisdom",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Mountain peaks touch cloudy skies,",
-      "Where the eagle freely flies,",
-      "Standing tall through wind and rain,",
-      "Strength is found through joy and pain."
-    ],
-    "author": "Anonymous",
-    "title": "Mountain Strength",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Dewdrops glisten in dawn's light,",
-      "Washing away the fears of night,",
-      "Each new day brings hope anew,",
-      "Fresh beginnings wait for you."
-    ],
-    "author": "Anonymous",
-    "title": "Dawn's Promise",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Wildflowers bloom where they choose,",
-      "With nothing left to win or lose,",
-      "Beauty grows without a plan,",
-      "Teaching all who understand."
-    ],
-    "author": "Anonymous",
-    "title": "Wild Beauty",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Thunder speaks across the plains,",
-      "As earth receives the healing rains,",
-      "Nature's power, fierce and free,",
-      "Shows us who we're meant to be."
-    ],
-    "author": "Anonymous",
-    "title": "Thunder's Voice",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "In silence, truth is found,",
-      "Where no words make a sound,",
-      "The heart speaks clearest when",
-      "We pause and breathe again."
-    ],
-    "author": "Anonymous",
-    "title": "Silent Truth",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Simple moments hold the key,",
-      "To what we're meant to be,",
-      "In present breath, we find",
-      "The peace we seek in mind."
-    ],
-    "author": "Anonymous",
-    "title": "Simple Moments",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Like water finds its way,",
-      "Through valleys day by day,",
-      "So patience carves the path,",
-      "To wisdom's aftermath."
-    ],
-    "author": "Anonymous",
-    "title": "Patient Flow",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Stillness holds the greatest power,",
-      "Growing stronger every hour,",
-      "In the quiet space between",
-      "All we've lost and might have been."
-    ],
-    "author": "Anonymous",
-    "title": "Stillness Power",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Footsteps on an empty path,",
-      "Leading beyond joy and wrath,",
-      "Each step taken with intent,",
-      "Shows the way that peace is meant."
-    ],
-    "author": "Anonymous",
-    "title": "Empty Path",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Tides return with ancient song,",
-      "Carrying wisdom all along,",
-      "Ebb and flow of life's great dance,",
-      "Teaching us to take our chance."
-    ],
-    "author": "Anonymous",
-    "title": "Tidal Wisdom",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Seashells scattered on the shore,",
-      "Each one different than before,",
-      "Ocean's gifts from depths below,",
-      "Reminding us to let things go."
-    ],
-    "author": "Anonymous",
-    "title": "Seashell Gifts",
-    "source": "builtin",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "Two roads diverged in yellow wood,",
-      "And sorry I could not travel both,",
-      "I took the one less traveled by,",
-      "And that has made all the difference."
+      "Two roads diverged in a yellow wood,",
+      "And sorry I could not travel both",
+      "And be one traveler, long I stood",
+      "And looked down one as far as I could"
     ],
     "author": "Robert Frost",
-    "title": "The Road Not Taken (excerpt)",
-    "source": "public_domain",
-    "theme": null,
-    "created_at": null
-  },
-  {
-    "lines": [
-      "I wandered lonely as a cloud,",
-      "That floats on high o'er vales and hills,",
-      "When all at once I saw a crowd,",
-      "A host of golden daffodils."
-    ],
-    "author": "William Wordsworth",
-    "title": "Daffodils (excerpt)",
-    "source": "public_domain",
+    "title": "The Road Not Taken",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
@@ -254,190 +20,633 @@
       "And miles to go before I sleep."
     ],
     "author": "Robert Frost",
-    "title": "Stopping by Woods (excerpt)",
-    "source": "public_domain",
+    "title": "Stopping by Woods on a Snowy Evening",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "They say girls want love,",
-      "and men want freedom",
-      "but I\u2019ve seen men walk away",
-      "from money, dreams,",
-      "and the passions of their lives,",
-      "just for the chance",
-      "to be soft without shame,",
-      "to cry without turning their faces,",
-      "to write sonnets on sticky notes,",
-      "to be kissed without armor,",
-      "wearing nothing but hope",
-      "the color of surrender."
+      "Something there is that doesn't love a wall,",
+      "That sends the frozen-ground-swell under it,",
+      "And spills the upper boulders in the sun;",
+      "And makes gaps even two can pass abreast."
     ],
-    "author": "snowball0101",
-    "title": "Want",
-    "source": "reddit",
+    "author": "Robert Frost",
+    "title": "Mending Wall",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "We\u2019ve started over, no big deals today,",
-      "every day different from the last;",
-      "And um,,,, do you think I\u2019d still be on here if it wasn\u2019t for your ass\u2026?",
-      "You are who I look for when my hand needs a squeeze. Without but within, think this thought often.",
-      "Your existence is enough. How could I not have faith in anything that feels this good.",
-      "I can feel your heart? Or at least I think I can.,,, wish I knew what to do.",
-      "Not every day you can meet someone who can call your bluff? Well not every day for me that is;",
-      "It\u2019s fascinating and terrifying all at once. Can\u2019t seem to get enough either. But time takes time and I have a feeling if we do see each other then we\u2019ll know where to go from there.,  we\u2019ll say;"
+      "I took the one less traveled by,",
+      "And that has made all the difference.",
+      "Yet knowing how way leads on to way,",
+      "I doubted if I should ever come back."
     ],
-    "author": "Spiritual-Promise-26",
-    "title": "You make me smile",
-    "source": "reddit",
+    "author": "Robert Frost",
+    "title": "The Road Not Taken (excerpt)",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "She\u2019s dangerous",
-      "she\u2019s evil",
-      "A conniving crazy wh*re",
-      "Or is she just existing",
-      "And you want her to be more"
+      "I wandered lonely as a cloud",
+      "That floats on high o'er vales and hills,",
+      "When all at once I saw a crowd,",
+      "A host of golden daffodils."
     ],
-    "author": "Desperate-Lemon-7985",
-    "title": "Wednesday",
-    "source": "reddit",
+    "author": "William Wordsworth",
+    "title": "Daffodils",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "Freud would have loved this one! (Oedipus much?)",
-      "Can a poem also be a joke and vice versa? \u2014See Exhibit A above!",
-      "I Am Flying Into Myself: Selected Poems 1960-2014"
+      "The child is father of the man;",
+      "And I could wish my days to be",
+      "Bound each to each by natural piety.",
+      "My heart leaps up when I behold"
     ],
-    "author": "perrolazarillo",
-    "title": "[poem] \u201cDear Advice Columnist\u201d \u2014 Bill Knott",
-    "source": "custom",
+    "author": "William Wordsworth",
+    "title": "My Heart Leaps Up",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "They say girls want love,",
-      "and men want freedom",
-      "but I\u2019ve seen men walk away",
-      "from money, dreams,",
-      "and the passions of their lives,",
-      "just for the chance",
-      "to be soft without shame,",
-      "to cry without turning their faces,",
-      "to write sonnets on sticky notes,",
-      "to be kissed without armor,",
-      "wearing nothing but hope",
-      "the color of surrender."
+      "Hope is the thing with feathers",
+      "That perches in the soul,",
+      "And sings the tune without the words,",
+      "And never stops at all."
     ],
-    "author": "snowball0101",
-    "title": "Want",
-    "source": "custom",
+    "author": "Emily Dickinson",
+    "title": "Hope",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "I often seem to think",
-      "of ink",
-      "flowing over flowers.",
-      "but from time to time the focus shifts",
-      "and I realize,",
-      "the flowers were being used",
-      "as impromptu paint brushes.",
-      "Lmk what you all think yurr"
+      "I'm nobody! Who are you?",
+      "Are you nobody, too?",
+      "Then there's a pair of us - don't tell!",
+      "They'd banish us, you know."
     ],
-    "author": "Dazzling_Many_498",
-    "title": "Inked flowers?",
-    "source": "custom",
+    "author": "Emily Dickinson",
+    "title": "I'm Nobody",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "We\u2019ve started over, no big deals today,",
-      "every day different from the last;",
-      "And um,,,, do you think I\u2019d still be on here if it wasn\u2019t for your ass\u2026?",
-      "You are who I look for when my hand needs a squeeze. Without but within, think this thought often.",
-      "Your existence is enough. How could I not have faith in anything that feels this good.",
-      "I can feel your heart? Or at least I think I can.,,, wish I knew what to do.",
-      "Not every day you can meet someone who can call your bluff? Well not every day for me that is;",
-      "It\u2019s fascinating and terrifying all at once. Can\u2019t seem to get enough either. But time takes time and I have a feeling if we do see each other then we\u2019ll know where to go from there.,  we\u2019ll say;"
+      "Because I could not stop for Death,",
+      "He kindly stopped for me;",
+      "The carriage held but just ourselves",
+      "And Immortality."
     ],
-    "author": "Spiritual-Promise-26",
-    "title": "You make me smile",
-    "source": "custom",
+    "author": "Emily Dickinson",
+    "title": "Because I Could Not Stop for Death",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "I think I love you.",
-      "Without remorse, or trepidation.",
-      "I think I love you.",
-      "Without limits,  or fear.",
-      "I think I love you.",
-      "More than less.",
-      "Greater than myself,",
-      "While learning to love me",
-      "Through you I find peace.",
-      "In you,  I find myself whole."
+      "Out of the huts of history's shame",
+      "I rise",
+      "Up from a past that's rooted in pain",
+      "I rise"
     ],
-    "author": "bekdawg10",
-    "title": "Loved",
-    "source": "custom",
+    "author": "Maya Angelou",
+    "title": "Still I Rise",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "She\u2019s dangerous",
-      "she\u2019s evil",
-      "A conniving crazy wh*re",
-      "Or is she just existing",
-      "And you want her to be more"
+      "You may write me down in history",
+      "With your bitter, twisted lies,",
+      "You may trod me in the very dirt",
+      "But still, like dust, I'll rise."
     ],
-    "author": "Desperate-Lemon-7985",
-    "title": "Wednesday",
-    "source": "custom",
+    "author": "Maya Angelou",
+    "title": "Still I Rise (excerpt)",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
     "lines": [
-      "How can you go through life without purpose",
-      "Walk an endless path losing focus",
-      "Seeing everyone accomplishing their dreams",
-      "Wondering when yours will spread their wings",
-      "But what are my dreams anyway?",
-      "What if I never build my own way",
-      "How can I wish upon the stars",
-      "When the sky seems so high and so far",
-      "They\u2019re waiting for my moment to come",
-      "But how can I tell them that I\u2019m already done",
-      "my story ended before it even began",
-      "The day I lost hope, tucked my tail and ran"
+      "Hold fast to dreams",
+      "For if dreams die",
+      "Life is a broken-winged bird",
+      "That cannot fly."
     ],
-    "author": "velaris_78",
-    "title": "Lost dreams",
-    "source": "custom",
+    "author": "Langston Hughes",
+    "title": "Dreams",
+    "source": "builtin",
     "theme": null,
     "created_at": null
   },
   {
-    "lines": [],
-    "author": "AI in style of William Wordsworth",
-    "title": "Nature Reflections",
-    "source": "azure_gpt",
+    "lines": [
+      "What happens to a dream deferred?",
+      "Does it dry up",
+      "like a raisin in the sun?",
+      "Or fester like a sore\u2014"
+    ],
+    "author": "Langston Hughes",
+    "title": "Harlem",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I've known rivers:",
+      "I've known rivers ancient as the world and older than the",
+      "flow of human blood in human veins.",
+      "My soul has grown deep like the rivers."
+    ],
+    "author": "Langston Hughes",
+    "title": "The Negro Speaks of Rivers",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I celebrate myself, and sing myself,",
+      "And what I assume you shall assume,",
+      "For every atom belonging to me as good belongs to you.",
+      "I loafe and invite my soul,"
+    ],
+    "author": "Walt Whitman",
+    "title": "Song of Myself",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "O Captain! My Captain! our fearful trip is done,",
+      "The ship has weather'd every rack, the prize we sought is won,",
+      "The port is near, the bells I hear, the people all exulting,",
+      "While follow eyes the steady keel, the vessel grim and daring;"
+    ],
+    "author": "Walt Whitman",
+    "title": "O Captain! My Captain!",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Shall I compare thee to a summer's day?",
+      "Thou art more lovely and more temperate:",
+      "Rough winds do shake the darling buds of May,",
+      "And summer's lease hath all too short a date:"
+    ],
+    "author": "William Shakespeare",
+    "title": "Sonnet 18",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "To be, or not to be, that is the question:",
+      "Whether 'tis nobler in the mind to suffer",
+      "The slings and arrows of outrageous fortune,",
+      "Or to take arms against a sea of troubles"
+    ],
+    "author": "William Shakespeare",
+    "title": "Hamlet",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Once upon a midnight dreary, while I pondered, weak and weary,",
+      "Over many a quaint and curious volume of forgotten lore\u2014",
+      "While I nodded, nearly napping, suddenly there came a tapping,",
+      "As of some one gently rapping, rapping at my chamber door."
+    ],
+    "author": "Edgar Allan Poe",
+    "title": "The Raven",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "It was many and many a year ago,",
+      "In a kingdom by the sea,",
+      "That a maiden there lived whom you may know",
+      "By the name of Annabel Lee;"
+    ],
+    "author": "Edgar Allan Poe",
+    "title": "Annabel Lee",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "If you can keep your head when all about you",
+      "Are losing theirs and blaming it on you,",
+      "If you can trust yourself when all men doubt you,",
+      "But make allowance for their doubting too;"
+    ],
+    "author": "Rudyard Kipling",
+    "title": "If",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "She walks in beauty, like the night",
+      "Of cloudless climes and starry skies;",
+      "And all that's best of dark and bright",
+      "Meet in her aspect and her eyes:"
+    ],
+    "author": "Lord Byron",
+    "title": "She Walks in Beauty",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I met a traveller from an antique land,",
+      "Who said\u2014Two vast and trunkless legs of stone",
+      "Stand in the desert. Near them, on the sand,",
+      "Half sunk a shattered visage lies, whose frown,"
+    ],
+    "author": "Percy Bysshe Shelley",
+    "title": "Ozymandias",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "A thing of beauty is a joy for ever:",
+      "Its loveliness increases; it will never",
+      "Pass into nothingness; but still will keep",
+      "A bower quiet for us, and a sleep"
+    ],
+    "author": "John Keats",
+    "title": "Endymion",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Season of mists and mellow fruitfulness,",
+      "Close bosom-friend of the maturing sun;",
+      "Conspiring with him how to load and bless",
+      "With fruit the vines that round the thatch-eves run;"
+    ],
+    "author": "John Keats",
+    "title": "To Autumn",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Tyger Tyger, burning bright,",
+      "In the forests of the night;",
+      "What immortal hand or eye,",
+      "Could frame thy fearful symmetry?"
+    ],
+    "author": "William Blake",
+    "title": "The Tyger",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Little Lamb who made thee",
+      "Dost thou know who made thee",
+      "Gave thee life & bid thee feed.",
+      "By the stream & o'er the mead;"
+    ],
+    "author": "William Blake",
+    "title": "The Lamb",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "'Tis better to have loved and lost",
+      "Than never to have loved at all.",
+      "Strong Son of God, immortal Love,",
+      "Whom we, that have not seen thy face,"
+    ],
+    "author": "Alfred Lord Tennyson",
+    "title": "In Memoriam A.H.H.",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Half a league, half a league,",
+      "Half a league onward,",
+      "All in the valley of Death",
+      "Rode the six hundred."
+    ],
+    "author": "Alfred Lord Tennyson",
+    "title": "The Charge of the Light Brigade",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "What is success?",
+      "To laugh often and much;",
+      "To win the respect of intelligent people",
+      "and the affection of children;"
+    ],
+    "author": "Ralph Waldo Emerson",
+    "title": "Success",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I went to the woods to live deliberately,",
+      "To front only the essential facts of life,",
+      "And see if I could not learn what it had to teach,",
+      "And not, when I came to die, discover that I had not lived."
+    ],
+    "author": "Henry David Thoreau",
+    "title": "Walden",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Hog Butcher for the World,",
+      "Tool Maker, Stacker of Wheat,",
+      "Player with Railroads and the Nation's Freight Handler;",
+      "Stormy, husky, brawling,"
+    ],
+    "author": "Carl Sandburg",
+    "title": "Chicago",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "i carry your heart with me(i carry it in",
+      "my heart)i am never without it(anywhere",
+      "i go you go,my dear;and whatever is done",
+      "by only me is your doing,my darling)"
+    ],
+    "author": "e.e. cummings",
+    "title": "i carry your heart with me",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Perhaps all the dragons in our lives",
+      "are princesses who are only waiting to see us act,",
+      "just once, with beauty and courage.",
+      "Perhaps everything that frightens us is, in its deepest essence,"
+    ],
+    "author": "Rainer Maria Rilke",
+    "title": "Letters to a Young Poet",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I love you without knowing how, or when, or from where.",
+      "I love you straightforwardly, without complexities or pride;",
+      "so I love you because I don't know any other way",
+      "than this: where I does not exist, nor you,"
+    ],
+    "author": "Pablo Neruda",
+    "title": "Sonnet XVII",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Your children are not your children.",
+      "They are the sons and daughters of Life's longing for itself.",
+      "They come through you but not from you,",
+      "And though they are with you yet they belong not to you."
+    ],
+    "author": "Khalil Gibran",
+    "title": "On Children",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "And think not you can direct the course of love,",
+      "For love, if it finds you worthy, directs your course.",
+      "Love has no other desire but to fulfill itself.",
+      "But if you love and must needs have desires, let these be your desires:"
+    ],
+    "author": "Khalil Gibran",
+    "title": "On Love",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Where the mind is without fear and the head is held high",
+      "Where knowledge is free",
+      "Where the world has not been broken up into fragments",
+      "By narrow domestic walls"
+    ],
+    "author": "Rabindranath Tagore",
+    "title": "Where The Mind Is Without Fear",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Tell me, what else should I have done?",
+      "Doesn't everything die at last, and too soon?",
+      "Tell me, what is it you plan to do",
+      "with your one wild and precious life?"
+    ],
+    "author": "Mary Oliver",
+    "title": "The Summer Day",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Out beyond ideas of wrongdoing and rightdoing,",
+      "there is a field. I'll meet you there.",
+      "When the soul lies down in that grass,",
+      "the world is too full to talk about."
+    ],
+    "author": "Rumi",
+    "title": "Out Beyond Ideas",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Let yourself be silently drawn by the strange pull of what you really love.",
+      "It will not lead you astray.",
+      "What you seek is seeking you.",
+      "Yesterday I was clever, so I wanted to change the world."
+    ],
+    "author": "Rumi",
+    "title": "What You Seek Is Seeking You",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I wish I could show you,",
+      "When you are lonely or in darkness,",
+      "The astonishing light",
+      "Of your own being."
+    ],
+    "author": "Hafez",
+    "title": "The Light of Your Own Being",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "The birds have vanished into the sky,",
+      "and now the last cloud drains away.",
+      "We sit together, the mountain and me,",
+      "until only the mountain remains."
+    ],
+    "author": "Li Bai",
+    "title": "Sitting Alone by Jingting Mountain",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "An ancient pond\u2014",
+      "a frog leaps in,",
+      "the sound of water.",
+      "Silent and serene."
+    ],
+    "author": "Matsuo Bash\u014d",
+    "title": "Ancient Pond",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Even after all this time",
+      "The sun never says to the earth,",
+      "\"You owe me.\"",
+      "Look what happens with a love like that."
+    ],
+    "author": "Hafez",
+    "title": "A Love Like That",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Do not go gentle into that good night,",
+      "Old age should burn and rave at close of day;",
+      "Rage, rage against the dying of the light.",
+      "Though wise men at their end know dark is right,"
+    ],
+    "author": "Dylan Thomas",
+    "title": "Do Not Go Gentle Into That Good Night",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I have a little shadow that goes in and out with me,",
+      "And what can be the use of him is more than I can see.",
+      "He is very, very like me from the heels up to the head;",
+      "And I see him jump before me, when I jump into my bed."
+    ],
+    "author": "Robert Louis Stevenson",
+    "title": "My Shadow",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "I think that I shall never see",
+      "A poem lovely as a tree.",
+      "A tree whose hungry mouth is prest",
+      "Against the earth's sweet flowing breast;"
+    ],
+    "author": "Joyce Kilmer",
+    "title": "Trees",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "Remember me when I am gone away,",
+      "Gone far away into the silent land;",
+      "When you can no more hold me by the hand,",
+      "Nor I half turn to go yet turning stay."
+    ],
+    "author": "Christina Rossetti",
+    "title": "Remember",
+    "source": "builtin",
+    "theme": null,
+    "created_at": null
+  },
+  {
+    "lines": [
+      "You do not have to walk on your knees",
+      "for a hundred miles through the desert, repenting.",
+      "You only have to let the soft animal of your body",
+      "love what it loves."
+    ],
+    "author": "Mary Oliver",
+    "title": "Famous poem by Mary Oliver",
+    "source": "gpt_recited",
     "theme": "nature",
-    "created_at": "2025-07-17T16:01:43.776454"
+    "created_at": "2025-07-22T20:12:53.078733"
   }
 ]
