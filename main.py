@@ -152,7 +152,7 @@ async def generate_poetry_video(
             poetry_lines = poetry_lines[:settings.max_lines]
         
         # Handle voice parameter - support both old and new formats
-        enable_voiceover = request.enable_voiceover or False
+        enable_voiceover = True if request.enable_voiceover is None else request.enable_voiceover
         voice_style = request.voice_style or "edge_female_calm"
         
         # Check if voice is specified as a direct parameter (backward compatibility)

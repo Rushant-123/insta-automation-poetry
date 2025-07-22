@@ -20,6 +20,11 @@ class Settings(BaseSettings):
     azure_openai_api_key: Optional[str] = None
     azure_openai_api_version: str = "2025-03-01-preview"
     azure_openai_model: str = "onyx"
+    azure_openai_deployment_name: Optional[str] = None
+    azure_openai_tts_endpoint: Optional[str] = None
+    azure_openai_tts_api_key: Optional[str] = None
+    azure_openai_tts_api_version: Optional[str] = None
+    pexels_api_key: Optional[str] = None
     
     # Video Settings
     video_width: int = 1080

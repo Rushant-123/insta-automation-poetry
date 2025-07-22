@@ -2,6 +2,7 @@ import os
 import logging
 import requests
 from config.settings import settings
+from requests_toolbelt.multipart.encoder import MultipartEncoder
 
 logger = logging.getLogger(__name__)
 
@@ -36,26 +37,28 @@ class EC2UploadService:
         if not reel_id:
             reel_id = os.path.splitext(os.path.basename(local_file_path))[0]
         filename = f"{video_type}_{reel_id}.mp4"
-        files = {
-            'video': (filename, open(local_file_path, 'rb'), 'video/mp4')
-        }
-        data = {
-            'caption': caption,
-            'accessToken': settings.ec2_access_token,
-            'accountId': settings.ec2_account_id
-        }
-        try:
-            logger.info(f"Uploading video to EC2: {filename}")
-            response = requests.post(self.upload_url, files=files, data=data)
-            if response.status_code == 200:
-                logger.info(f"Video uploaded successfully to EC2: {response.text}")
-                return response.text
-            else:
-                logger.error(f"Failed to upload video to EC2: {response.status_code} {response.text}")
-                raise Exception(f"EC2 upload failed: {response.status_code} {response.text}")
-        except Exception as e:
-            logger.error(f"Unexpected error during EC2 upload: {e}")
-            raise
+        with open(local_file_path, 'rb') as f:
+            m = MultipartEncoder(
+                fields={
+                    'video': (filename, f, 'video/mp4'),
+                    'caption': caption,
+                    'accessToken': settings.ec2_access_token,
+                    'accountId': settings.ec2_account_id
+                }
+            )
+            headers = {'Content-Type': m.content_type}
+            try:
+                logger.info(f"Uploading video to EC2: {filename}")
+                response = requests.post(self.upload_url, data=m, headers=headers)
+                if response.status_code == 200:
+                    logger.info(f"Video uploaded successfully to EC2: {response.text}")
+                    return response.text
+                else:
+                    logger.error(f"Failed to upload video to EC2: {response.status_code} {response.text}")
+                    raise Exception(f"EC2 upload failed: {response.status_code} {response.text}")
+            except Exception as e:
+                logger.error(f"Unexpected error during EC2 upload: {e}")
+                raise
 
     @staticmethod
     def generate_filename(video_id: str, file_extension: str = "mp4") -> str:
