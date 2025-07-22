@@ -16,6 +16,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get clean
 
+# Configure ImageMagick policy to allow text operations
+RUN sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml
+
 # Create non-root user for security
 RUN groupadd -r poetry && useradd -r -g poetry poetry
 
