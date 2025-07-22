@@ -31,10 +31,10 @@ class PoetryService:
         self.cache_file = "assets/poetry_cache.json"
         
         # Azure OpenAI GPT configuration
-        self.gpt_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT", "https://dunlin-aplication-east-us-2.openai.azure.com/openai/deployments/o1-mini/chat/completions?api-version=2025-01-01-preview")
-        self.gpt_api_key = os.getenv("AZURE_OPENAI_API_KEY", "77cd722ffe2d450d80db32a2eead2a82")
-        self.gpt_deployment = os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME", "4o")
-        self.gpt_api_version = os.getenv("AZURE_OPENAI_API_VERSION", "2024-12-01-preview")
+        self.gpt_endpoint = settings.azure_openai_endpoint
+        self.gpt_api_key = settings.azure_openai_api_key
+        self.gpt_deployment = settings.azure_openai_deployment_name
+        self.gpt_api_version = settings.azure_openai_api_version
         
         # Famous poets for style reference
         self.famous_poets = [
@@ -49,12 +49,10 @@ class PoetryService:
         ]
         
     async def initialize(self):
-        """Initialize poetry database."""
+        """Initialize poetry database (no cache, only built-in)."""
         logger.info("Initializing poetry database...")
-        await self._load_cached_poetry()
-        if not self.poetry_database:
-            await self._fetch_initial_poetry()
-            
+        await self._add_builtin_poetry()
+
     async def _load_cached_poetry(self):
         """Load poetry from cache file."""
         try:
@@ -834,33 +832,25 @@ For example, if asked for Robert Frost and nature, you might recite lines from "
         min_lines: int = 4,
         max_lines: int = 8
     ) -> Poetry:
-        """Get poetry matching specified themes."""
+        """Get poetry matching specified themes (always use GPT first, never cache)."""
         theme_name = themes[0] if themes else "nature"
-        
-        # First, try to get an existing famous poem recited by GPT
         try:
-            # Select a random poet style
             poet = random.choice(self.famous_poets)
             gpt_poem = await self.recite_existing_poem_with_gpt(theme_name, poet["name"])
-            
             if gpt_poem and min_lines <= len(gpt_poem.lines) <= max_lines:
                 logger.info(f"Using existing poem recited by GPT: {poet['name']} - {gpt_poem.title}")
                 return gpt_poem
         except Exception as e:
             logger.warning(f"Failed to get GPT recited poem: {e}")
-        
-        # If GPT fails, fall back to database
+        # Fallback to built-in poems only
         matching_poems = [
             poem for poem in self.poetry_database
             if min_lines <= len(poem.lines) <= max_lines
         ]
-        
         if matching_poems:
             selected_poem = random.choice(matching_poems)
             logger.info(f"Selected poem from {selected_poem.source}: {selected_poem.title}")
             return selected_poem
-        
-        # If no matches, return a default nature poem
         logger.warning("No matching poems found, using default")
         return Poetry(
             lines=[
