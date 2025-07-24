@@ -8,12 +8,12 @@ logger = logging.getLogger(__name__)
 
 class EC2UploadService:
     """Service for uploading videos to EC2 endpoint."""
-
+    
     def __init__(self):
         self.upload_url = settings.ec2_upload_url
         self.access_token = settings.ec2_access_token
         self.account_id = settings.ec2_account_id
-
+        
     async def upload_video(
         self,
         local_file_path: str,
@@ -23,7 +23,7 @@ class EC2UploadService:
     ) -> str:
         """
         Upload a video file to the EC2 endpoint.
-
+        
         Args:
             local_file_path: Path to the local video file
             caption: Caption for the video (poem text)
@@ -56,13 +56,13 @@ class EC2UploadService:
                 if response.status_code == 200:
                     logger.info(f"Video uploaded successfully to EC2: {response.text}")
                     return response.text
-                else:
+            else:
                     logger.error(f"Failed to upload video to EC2: {response.status_code} {response.text}")
                     raise Exception(f"EC2 upload failed: {response.status_code} {response.text}")
-            except Exception as e:
+        except Exception as e:
                 logger.error(f"Unexpected error during EC2 upload: {e}")
-                raise
-
+            raise
+            
     @staticmethod
     def generate_filename(video_id: str, file_extension: str = "mp4") -> str:
-        return f"poetry-videos/{video_id}.{file_extension}" 
+        return f"poetry-videos/{video_id}.{file_extension}"

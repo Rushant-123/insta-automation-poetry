@@ -53,7 +53,7 @@ class PoetryService:
         """Initialize poetry database (no cache, only built-in)."""
         logger.info("Initializing poetry database...")
         await self._add_builtin_poetry()
-
+            
     async def _load_cached_poetry(self):
         """Load poetry from cache file."""
         try:

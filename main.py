@@ -154,7 +154,7 @@ async def generate_poetry_video(
         # Handle voice parameter - support both old and new formats
         enable_voiceover = True if request.enable_voiceover is None else request.enable_voiceover
         voice_style = request.voice_style or "edge_female_calm"
-
+        
         # Always enable voiceover if voice_style is set
         if request.voice_style:
             enable_voiceover = True

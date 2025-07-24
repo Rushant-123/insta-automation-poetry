@@ -9,36 +9,28 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y \
     ffmpeg \
     imagemagick \
-    libmagick++-dev \
-    pkg-config \
-    curl \
-    wget \
-    && rm -rf /var/lib/apt/lists/* \
-    && apt-get clean
+    && rm -rf /var/lib/apt/lists/*
 
-# Configure ImageMagick policy to allow text operations
-RUN sed -i 's/rights="none" pattern="@\*"/rights="read|write" pattern="@*"/' /etc/ImageMagick-6/policy.xml
+# Fix ImageMagick policy to allow text operations
+RUN sed -i 's/rights="none" pattern="PDF"/rights="read|write" pattern="PDF"/' /etc/ImageMagick-6/policy.xml
 
-# Create non-root user for security
-RUN groupadd -r poetry && useradd -r -g poetry poetry
-
-# Create working directory
+# Create app directory and user
+RUN useradd -m -u 1000 poetry
 WORKDIR /app
 
-# Copy requirements and install Python dependencies
+# Install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 COPY . .
 
-# Create necessary directories and set permissions (after copy to fix permissions)
+# Create necessary directories and set permissions
 RUN mkdir -p temp assets/backgrounds assets/audio audio/tts && \
     chown -R poetry:poetry /app && \
-    chmod -R 777 /app/assets /app/temp && \
-    find /app/audio -type d -exec chmod 777 {} \; && \
-    find /app/audio -type f -exec chmod 666 {} \;
+    find /app/audio -type d -exec chmod 755 {} \; && \
+    find /app/audio -type f -exec chmod 644 {} \; && \
+    chmod -R 777 /app/audio/tts /app/temp
 
 # Switch to non-root user
 USER poetry
@@ -51,4 +43,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:8001/health || exit 1
 
 # Run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001", "--workers", "1"] 
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"] 

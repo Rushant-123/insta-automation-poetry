@@ -47,8 +47,8 @@ class Settings(BaseSettings):
     
     # EC2 Upload Settings
     ec2_upload_url: str = "http://44.208.29.67:3000/api/upload-reel"
-    ec2_access_token: str = "IGAAi3ZADNDq1tBZAE56aHlQTEZAOTDNvR0ZArVDJ2TXlMSVplWVc0UDUtQlNMbk9ubU9ENTUtM1l1cUFzRFU3NW54SF96ek5fR3FoOVI0QlRPNnQyLXlmajFYekpEaWRiOWd0ZA0IxVm5sZAXRldmdkek0xUk9tVnRfWDhLWGlLcVpMbwZDZD"
-    ec2_account_id: str = "17841474257813173"
+    ec2_access_token: str = "IGAAT3YhbJjzdBZAFBrYkZA0RjNQVjliM0VtZAmRRU00yVWlqOWdUaHJZAd3hlUEZAJSWlvWmp3T3ZAJSEdxRjBOYTU2aE1nLXE5b3ljdUJDMnRNTTUwYWZAZASW9xYmI0ZAHVMZA0hoRmlNYURUWjBKUVItSDkwRmg2dUZAzTXhHOHRCQkpyOAZDZD"
+    ec2_account_id: str = "17841473376710062"
     
     class Config:
         env_file = ".env"

@@ -100,7 +100,7 @@ Generate a poetry video by sending a POST request to `/generate-video`:
 curl -X POST http://your-server:8000/generate-video \
   -H "Content-Type: application/json" \
   -d '{
-    "theme": "nature",
+  "theme": "nature",
     "voice_style": "edge_female_calm"
   }'
 ```
