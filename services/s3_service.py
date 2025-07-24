@@ -56,12 +56,11 @@ class EC2UploadService:
                 if response.status_code == 200:
                     logger.info(f"Video uploaded successfully to EC2: {response.text}")
                     return response.text
-            else:
-                    logger.error(f"Failed to upload video to EC2: {response.status_code} {response.text}")
-                    raise Exception(f"EC2 upload failed: {response.status_code} {response.text}")
-        except Exception as e:
+                logger.error(f"Failed to upload video to EC2: {response.status_code} {response.text}")
+                raise Exception(f"EC2 upload failed: {response.status_code} {response.text}")
+            except Exception as e:
                 logger.error(f"Unexpected error during EC2 upload: {e}")
-            raise
+                raise
             
     @staticmethod
     def generate_filename(video_id: str, file_extension: str = "mp4") -> str:
