@@ -158,7 +158,7 @@ async def generate_poetry_video(
         # Always enable voiceover if voice_style is set
         if request.voice_style:
             enable_voiceover = True
-
+        
         # Check if voice is specified as a direct parameter (backward compatibility)
         if request.voice:
             enable_voiceover = True
