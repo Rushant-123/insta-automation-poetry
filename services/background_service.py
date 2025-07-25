@@ -160,10 +160,10 @@ class BackgroundService:
                 
         # If no files available, try to fetch one
         logger.info(f"No background videos found, fetching...")
-            fetched = await self.fetch_backgrounds_for_theme(theme, 1)
-            if fetched:
-                return fetched[0]
-            return None
+        fetched = await self.fetch_backgrounds_for_theme(theme, 1)
+        if fetched:
+            return fetched[0]
+        return None
         
     async def _copy_to_temp(self, original_path: str) -> str:
         """Copy background video to temporary location to avoid deleting original."""
