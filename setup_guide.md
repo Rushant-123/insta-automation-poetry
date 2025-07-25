@@ -51,53 +51,53 @@ export S3_BUCKET_NAME="your-bucket-name"
 # Start the service
 python main.py
 
-# Service runs on http://localhost:8001
+# Service runs on http://localhost:8000
 ```
 
 ## 📊 Content Management
 
 ### Check Current Status
 ```bash
-curl http://localhost:8001/content/status
+curl http://localhost:8000/content/status
 ```
 
 ### Fetch Background Videos (25 total, 5 per theme)
 ```bash
 # Fetch nature backgrounds
-curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=nature&count=5"
+curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=nature&count=5"
 
 # Fetch ocean backgrounds  
-curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=ocean&count=5"
+curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=ocean&count=5"
 
 # Fetch sunset backgrounds
-curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=sunset&count=5"
+curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=sunset&count=5"
 
 # Fetch forest backgrounds
-curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=forest&count=5"
+curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=forest&count=5"
 
 # Fetch minimal backgrounds
-curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=minimal&count=5"
+curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=minimal&count=5"
 ```
 
 ### Fetch Poetry from Multiple Sources
 ```bash
 # Fetch from Reddit poetry communities
-curl -X POST "http://localhost:8001/content/fetch-poetry?source=reddit&count=20"
+curl -X POST "http://localhost:8000/content/fetch-poetry?source=reddit&count=20"
 
 # Fetch from Poetry Foundation
-curl -X POST "http://localhost:8001/content/fetch-poetry?source=poetry_foundation&count=15"
+curl -X POST "http://localhost:8000/content/fetch-poetry?source=poetry_foundation&count=15"
 
 # Fetch from Poets.org
-curl -X POST "http://localhost:8001/content/fetch-poetry?source=poets_org&count=15"
+curl -X POST "http://localhost:8000/content/fetch-poetry?source=poets_org&count=15"
 
 # Fetch from all sources
-curl -X POST "http://localhost:8001/content/fetch-poetry?source=all&count=30"
+curl -X POST "http://localhost:8000/content/fetch-poetry?source=all&count=30"
 ```
 
 ### Fetch Background Audio
 ```bash
 # Fetch peaceful music
-curl -X POST "http://localhost:8001/content/fetch-audio?count=10"
+curl -X POST "http://localhost:8000/content/fetch-audio?count=10"
 ```
 
 ## 🎬 Generate Enhanced Videos
@@ -109,7 +109,7 @@ After fetching content, your videos will automatically use:
 
 ```bash
 # Generate video with enhanced content
-curl -X POST "http://localhost:8001/generate-video" \
+curl -X POST "http://localhost:8000/generate-video" \
   -H "Content-Type: application/json" \
   -d '{
     "theme": "nature",
@@ -191,7 +191,7 @@ DEBUG=false
 docker-compose up -d
 
 # Initialize content
-docker exec poetry-generator curl -X POST "http://localhost:8001/content/fetch-backgrounds?theme=nature&count=5"
+docker exec poetry-generator curl -X POST "http://localhost:8000/content/fetch-backgrounds?theme=nature&count=5"
 ```
 
 ## 📈 Scaling Tips
@@ -204,7 +204,7 @@ docker exec poetry-generator curl -X POST "http://localhost:8001/content/fetch-b
 ## 🔍 Troubleshooting
 
 ### No Background Videos
-- Check Pexels API key: `curl http://localhost:8001/content/status`
+- Check Pexels API key: `curl http://localhost:8000/content/status`
 - Manually add videos to `assets/backgrounds/`
 
 ### No Audio
@@ -222,4 +222,4 @@ docker exec poetry-generator curl -X POST "http://localhost:8001/content/fetch-b
 
 ## 📚 API Documentation
 
-Visit `http://localhost:8001/docs` for interactive API documentation with all endpoints and examples. 
+Visit `http://localhost:8000/docs` for interactive API documentation with all endpoints and examples. 

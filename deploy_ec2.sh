@@ -116,11 +116,11 @@ print_status "Waiting for application to start..."
 sleep 10
 
 # Check if the application is running
-if curl -f http://localhost:8001/health > /dev/null 2>&1; then
+if curl -f http://localhost:8000/health > /dev/null 2>&1; then
     print_success "Application is running successfully!"
-    print_status "API is available at: http://localhost:8001"
-    print_status "Health check: http://localhost:8001/health"
-    print_status "API documentation: http://localhost:8001/docs"
+    print_status "API is available at: http://localhost:8000"
+    print_status "Health check: http://localhost:8000/health"
+    print_status "API documentation: http://localhost:8000/docs"
 else
     print_error "Application failed to start properly"
     print_status "Checking container logs..."
@@ -157,18 +157,18 @@ fi
 
 # Setup firewall (if ufw is available)
 if command -v ufw &> /dev/null; then
-    read -p "Do you want to configure firewall to allow port 8001? (y/n): " -n 1 -r
+    read -p "Do you want to configure firewall to allow port 8000? (y/n): " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
         print_status "Configuring firewall..."
-        sudo ufw allow 8001/tcp
+        sudo ufw allow 8000/tcp
         sudo ufw reload
         print_success "Firewall configured"
     fi
 fi
 
 print_success "🎉 Deployment completed successfully!"
-print_status "Application is running at: http://localhost:8001"
+print_status "Application is running at: http://localhost:8000"
 print_status "To view logs: docker-compose logs -f"
 print_status "To stop: docker-compose down"
 print_status "To restart: docker-compose restart"
