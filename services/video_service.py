@@ -368,31 +368,15 @@ class VideoService:
         primary_color = theme_config["color_palette"]["primary"]
         secondary_color = theme_config["color_palette"]["secondary"]
         
-        # Calculate text positioning
-        line_height = int(font_size * line_spacing)
-        total_text_height = len(poetry_lines) * line_height
-        start_y = (height - total_text_height) // 2
+        # First, create all text clips to calculate actual dimensions
+        temp_text_clips = []
+        font_path = self._get_font_path(font_family, text_style)
         
-        # Create a semi-transparent background for all text
-        text_bg_height = total_text_height + 60  # Add padding
-        text_bg_width = width - 40  # Leave margin
-        text_background = ColorClip(
-            size=(text_bg_width, text_bg_height),
-            color=(0, 0, 0),  # Black background
-            duration=duration
-        ).set_opacity(0.5).set_position(('center', start_y - 30))  # 30px padding top
-        
-        text_clips.append(text_background)
-        
-        # Create individual line clips
         for i, line in enumerate(poetry_lines):
             if not line.strip():
                 continue
                 
-            y_position = start_y + (i * line_height)
-            
-            # Create text clip
-            font_path = self._get_font_path(font_family, text_style)
+            # Create text clip to get actual dimensions
             txt_clip = TextClip(
                 line.strip(),
                 fontsize=font_size,
@@ -402,17 +386,46 @@ class VideoService:
                 size=(width - 100, None),  # Leave margin
                 align='center'
             )
+            temp_text_clips.append(txt_clip)
+        
+        # Calculate actual text positioning based on real clip dimensions
+        if temp_text_clips:
+            # Calculate total height needed for all text clips
+            total_text_height = 0
+            for clip in temp_text_clips:
+                total_text_height += clip.h + (line_spacing * font_size * 0.5)  # Add some spacing between lines
             
-            # Position text
-            txt_clip = txt_clip.set_position(('center', y_position))
+            # Ensure minimum height and add padding
+            total_text_height = max(total_text_height, len(poetry_lines) * font_size)
+            start_y = (height - total_text_height) // 2
             
-            # Apply animation
-            txt_clip = self._apply_text_animation(
-                txt_clip, animation_type, duration, i, len(poetry_lines)
-            )
+            # Create a semi-transparent background that adapts to actual text height
+            text_bg_height = total_text_height + 80  # Add more padding for better spacing
+            text_bg_width = width - 40  # Leave margin
+            text_background = ColorClip(
+                size=(text_bg_width, text_bg_height),
+                color=(0, 0, 0),  # Black background
+                duration=duration
+            ).set_opacity(0.5).set_position(('center', start_y - 40))  # 40px padding top
             
-            text_clips.append(txt_clip)
+            text_clips.append(text_background)
             
+            # Position and add text clips
+            current_y = start_y
+            for i, txt_clip in enumerate(temp_text_clips):
+                # Position text
+                txt_clip = txt_clip.set_position(('center', current_y))
+                
+                # Apply animation
+                txt_clip = self._apply_text_animation(
+                    txt_clip, animation_type, duration, i, len(temp_text_clips)
+                )
+                
+                text_clips.append(txt_clip)
+                
+                # Move to next line position
+                current_y += txt_clip.h + (line_spacing * font_size * 0.5)
+        
         return text_clips
         
     def _apply_text_animation(
