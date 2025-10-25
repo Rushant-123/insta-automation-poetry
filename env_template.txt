@@ -52,6 +52,13 @@ MIN_LINES=4
 MAX_LINES=8
 
 # =============================================================================
+# EC2 Upload Configuration (optional - for Instagram integration)
+# =============================================================================
+EC2_UPLOAD_URL=http://your-ec2-instance-url:3000/api/upload-reel
+EC2_ACCESS_TOKEN=your_instagram_access_token_here
+EC2_ACCOUNT_ID=your_instagram_account_id_here
+
+# =============================================================================
 # File Paths (optional - defaults are usually fine)
 # =============================================================================
 TEMP_DIR=./temp

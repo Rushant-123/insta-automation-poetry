@@ -44,7 +44,12 @@ services:
       # Poetry Settings
       - MIN_LINES=${MIN_LINES:-4}
       - MAX_LINES=${MAX_LINES:-8}
-      
+
+      # EC2 Upload Configuration
+      - EC2_UPLOAD_URL=${EC2_UPLOAD_URL}
+      - EC2_ACCESS_TOKEN=${EC2_ACCESS_TOKEN}
+      - EC2_ACCOUNT_ID=${EC2_ACCOUNT_ID}
+
       # File Paths
       - TEMP_DIR=${TEMP_DIR:-./temp}
       - ASSETS_DIR=${ASSETS_DIR:-./assets}

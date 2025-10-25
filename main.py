@@ -266,13 +266,13 @@ async def fetch_audio_endpoint(count: int = 10):
     """Fetch peaceful background music from Beatoven.ai for poetry videos."""
     try:
         logger.info(f"Fetching {count} peaceful audio tracks from Beatoven.ai")
-        
-        if not audio_service.beatoven_api_key or audio_service.beatoven_api_key == 'your_beatoven_api_key_here':
-            return {
-                "success": False,
-                "error": "Beatoven API key not configured",
-                "setup_instructions": audio_service.get_setup_instructions()
-            }
+
+        # Beatoven API integration not currently implemented
+        return {
+            "success": False,
+            "error": "Beatoven API integration not implemented - using local audio files",
+            "setup_instructions": audio_service.get_setup_instructions()
+        }
         
         audio_files = await audio_service.fetch_peaceful_music(count)
         
@@ -388,7 +388,8 @@ async def get_content_status():
             },
             "api_keys": {
                 "pexels": os.getenv('PEXELS_API_KEY', 'not_configured'),
-                "pixabay": os.getenv('PIXABAY_API_KEY', 'not_configured')
+                "pixabay": os.getenv('PIXABAY_API_KEY', 'not_configured'),
+                "beatoven": "not_implemented"
             }
         }
         
@@ -406,9 +407,9 @@ async def test_audio_apis():
         return {
             "success": True,
             "api_status": api_status,
-            "beatoven_configured": audio_service.beatoven_api_key != 'your_beatoven_api_key_here',
+            "beatoven_configured": False,
             "status_summary": audio_service.get_api_status_summary(),
-            "message": "Beatoven API connection test completed"
+            "message": "Local audio system test completed (Beatoven API not implemented)"
         }
     except Exception as e:
         logger.error(f"Failed to test APIs: {e}")
@@ -424,12 +425,12 @@ async def download_real_music(count: int = 3):
     try:
         logger.info(f"Downloading {count} tracks from Beatoven.ai")
         
-        if not audio_service.beatoven_api_key or audio_service.beatoven_api_key == 'your_beatoven_api_key_here':
-            return {
-                "success": False,
-                "error": "Beatoven API key not configured",
-                "setup_guide": audio_service.get_setup_instructions()
-            }
+        # Beatoven API integration not currently implemented
+        return {
+            "success": False,
+            "error": "Beatoven API integration not implemented",
+            "setup_guide": audio_service.get_setup_instructions()
+        }
         
         downloaded_files = await audio_service.fetch_peaceful_music(count)
         
@@ -477,16 +478,16 @@ async def get_audio_setup_guide():
         return {
             "current_audio_files": len(audio_files),
             "files": audio_files,
-            "beatoven_api_configured": audio_service.beatoven_api_key != 'your_beatoven_api_key_here',
+            "beatoven_api_configured": False,
             "setup_instructions": audio_service.get_setup_instructions(),
             "api_status": api_status,
             "recommended_approach": {
-                "step_1": "🎵 Beatoven.ai is the EXCLUSIVE music source",
-                "step_2": "📧 Contact hello@beatoven.ai for API access",
-                "step_3": "🔑 Set BEATOVEN_API_KEY environment variable",
-                "step_4": "✅ Test API with /content/test-audio-apis",
+                "step_1": "🎵 Using local audio files for poetry videos",
+                "step_2": "📁 Audio files are stored in the ./audio directory",
+                "step_3": "🔍 The system prioritizes: trending instrumentals → poetry reels → other tracks",
+                "step_4": "✅ Check /content/test-audio-apis for current status",
                 "current_status": audio_service.get_api_status_summary(),
-                "no_fallbacks": "⚠️ No fallback music generation - Beatoven only!"
+                "note": "Beatoven.ai API integration is not currently implemented"
             }
         }
     except Exception as e:
@@ -528,6 +529,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "main:app",
         host="0.0.0.0",
-        port=8001,
+        port=8000,
         reload=settings.debug
     ) 

@@ -46,9 +46,9 @@ class Settings(BaseSettings):
     max_lines: int = 8
     
     # EC2 Upload Settings
-    ec2_upload_url: str = "http://44.208.29.67:3000/api/upload-reel"
-    ec2_access_token: str = "IGAAT3YhbJjzdBZAFBrYkZA0RjNQVjliM0VtZAmRRU00yVWlqOWdUaHJZAd3hlUEZAJSWlvWmp3T3ZAJSEdxRjBOYTU2aE1nLXE5b3ljdUJDMnRNTTUwYWZAZASW9xYmI0ZAHVMZA0hoRmlNYURUWjBKUVItSDkwRmg2dUZAzTXhHOHRCQkpyOAZDZD"
-    ec2_account_id: str = "17841473376710062"
+    ec2_upload_url: Optional[str] = None
+    ec2_access_token: Optional[str] = None
+    ec2_account_id: Optional[str] = None
     
     class Config:
         env_file = ".env"
